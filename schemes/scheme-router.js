@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
     res.json(schemes);
   })
   .catch(err => {
+    console.log(err)
     res.status(500).json({ message: 'Failed to get schemes' });
   });
 });
@@ -54,6 +55,7 @@ router.post('/', (req, res) => {
     res.status(201).json(scheme);
   })
   .catch (err => {
+    console.log(err)
     res.status(500).json({ message: 'Failed to create new scheme' });
   });
 });
